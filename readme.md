@@ -1,0 +1,1 @@
+# vue-bem-directive

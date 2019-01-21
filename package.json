@@ -1,0 +1,54 @@
+{
+  "name": "vue-bem-directive",
+  "version": "1.0.0",
+  "description": "BEM computed class name generator for Vue.JS",
+  "main": "dist/vue-bem-directive.js",
+  "scripts": {
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit:watch": "vue-cli-service test:unit --watch",
+    "flow": "flow"
+  },
+  "files": [
+    "src",
+    "dist/*.js",
+    "flow-types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulcuber/vue-bem-directive.git"
+  },
+  "keywords": [
+    "vue",
+    "bem",
+    "class"
+  ],
+  "author": "ulcuber <victor17011998@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulcuber/vue-bem-directive/issues"
+  },
+  "homepage": "https://github.com/ulcuber/vue-bem-directive#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-flow": "^7.0.0",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-plugin-unit-mocha": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.28",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.12.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-mocha": "^5.2.1",
+    "eslint-plugin-vue": "^5.1.0",
+    "flow-bin": "^0.91.0",
+    "vue": "^2.5.22",
+    "vue-template-compiler": "^2.5.22"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^2.5.22"
+  }
+}
