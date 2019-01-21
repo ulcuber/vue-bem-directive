@@ -15,3 +15,26 @@ declare type BEM = {
   modifier: ?string,
   modifierValue: ?string,
 }
+
+declare type Component = {
+  _uid: string,
+  block: ?string,
+  $options: {
+    name: ?string,
+    block: ?string,
+  }
+}
+
+declare type MountedComponentVNode = {
+  context: Component;
+}
+
+declare type VNodeDirective = {
+  name: string;
+  rawName: string;
+  value?: any;
+  oldValue?: any;
+  arg?: string;
+  modifiers?: ASTModifiers;
+  def?: Object;
+}

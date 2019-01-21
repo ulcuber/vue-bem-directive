@@ -1,5 +1,5 @@
 // @flow
-import type { BEM, Delimiters } from '../flow-types';
+import type { BEM, Delimiters, Component } from '../flow-types';
 
 export function getArgs(arg: ?string): string[] {
   if (arg) {
@@ -14,7 +14,7 @@ function getNextArg(arr: string[], prefix: string): string {
 }
 
 export function getBEM(
-  component: any,
+  component: Component,
   args: string[],
   delimiters: Delimiters,
   hasArgsBlock: boolean = false,

@@ -1,17 +1,17 @@
 // @flow
-import type { Delimiters } from '../flow-types';
+import type { Delimiters, VNodeDirective, Component } from '../flow-types';
 
 import { isEquals, extractValueClasses } from './helpers';
 import { getArgs, getBEM } from './args';
 import apply from './apply';
 
-export default (
+export default function (
   el: HTMLElement,
-  bindings: Object,
-  component: any,
+  bindings: VNodeDirective,
+  component: Component,
   delimiters: Delimiters,
-  oldBlock: string,
-) => {
+  oldBlock: ?string = undefined,
+) {
   const oldClasses: string[] = [];
   const classes: string[] = [];
 
@@ -44,7 +44,7 @@ export default (
   if (value === undefined) {
     pushArgsClasses(classes, block);
   } else {
-    const prefixBlock: string = oldBlock === undefined || bindings.modifiers.b
+    const prefixBlock: string = !oldBlock || bindings.modifiers.b
       ? block
       : delimiters.ns + oldBlock;
 
@@ -78,9 +78,9 @@ export default (
       extractValueClasses(classes, oldClasses, value, prefix);
     }
   }
-  if (oldBlock !== undefined) {
+  if (oldBlock) {
     pushArgsClasses(oldClasses, oldBlock);
   }
 
   apply(el, classes, oldClasses);
-};
+}
