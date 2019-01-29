@@ -14,4 +14,10 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
   },
+  overrides: [
+    {
+      files: ['*'],
+      "excludedFiles": 'dist/*',
+    }
+  ]
 };

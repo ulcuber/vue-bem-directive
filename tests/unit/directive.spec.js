@@ -6,7 +6,7 @@ import {
   getMaxLength,
   replaceInArray,
 } from './helpers';
-import VueBem from '../../src/main';
+import VueBem from '../..';
 
 describe('When v-bem installed', () => {
   const maxLength = getMaxLength();
