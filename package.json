@@ -12,8 +12,8 @@
     "test:watch": "vue-cli-service test:unit --watch",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "precommit": "lint && build && test",
-    "prepublishOnly": "lint && build && test"
+    "precommit": "npm run lint && npm run build && npm run test",
+    "prepublishOnly": "npm run lint && npm run build && npm run test"
   },
   "files": [
     "dist/*.js"
