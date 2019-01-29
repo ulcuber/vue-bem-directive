@@ -2,16 +2,21 @@
   "name": "vue-bem-directive",
   "version": "1.0.0",
   "description": "BEM computed class name generator for Vue.JS",
-  "main": "dist/vue-bem-directive.js",
+  "main": "dist/index.js",
+  "module": "dist/vue-bem-directive.esm.js",
+  "browser": "dist/vue-bem-directive.umd.js",
   "scripts": {
-    "test:unit": "vue-cli-service test:unit",
-    "test:unit:watch": "vue-cli-service test:unit --watch",
-    "flow": "flow"
+    "flow": "flow",
+    "lint": "eslint src",
+    "test": "vue-cli-service test:unit",
+    "test:watch": "vue-cli-service test:unit --watch",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "precommit": "lint && build && test",
+    "prepublishOnly": "lint && build && test"
   },
   "files": [
-    "src",
-    "dist/*.js",
-    "flow-types"
+    "dist/*.js"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +34,6 @@
   },
   "homepage": "https://github.com/ulcuber/vue-bem-directive#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.2.3",
     "@babel/preset-flow": "^7.0.0",
     "@vue/cli-plugin-babel": "^3.3.0",
     "@vue/cli-plugin-eslint": "^3.3.0",
@@ -38,12 +42,18 @@
     "@vue/eslint-config-airbnb": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.28",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
     "chai": "^4.2.0",
     "eslint": "^5.12.0",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-mocha": "^5.2.1",
     "eslint-plugin-vue": "^5.1.0",
     "flow-bin": "^0.91.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "vue": "^2.5.22",
     "vue-template-compiler": "^2.5.22"
   },
