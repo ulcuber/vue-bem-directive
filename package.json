@@ -1,6 +1,6 @@
 {
   "name": "vue-bem-directive",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BEM computed class name generator for Vue.JS",
   "main": "dist/index.js",
   "module": "dist/vue-bem-directive.esm.js",
