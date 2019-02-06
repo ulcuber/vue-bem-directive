@@ -1,38 +1,44 @@
-When v-bem installed
-  For component with name block
-    ✓ v-bem                                                    => block (62ms)
-    ✓ v-bem:element                                            => block__element
-    ✓ v-bem:element.f                                          => block__element
-    ✓ v-bem:another:element.f.b                                => another__element
-    ✓ v-bem:element:mod                                        => block__element_mod
-    ✓ v-bem:element:mod.f                                      => block__element block__element_mod
-    ✓ v-bem:element:mod:value                                  => block__element_mod-value
-    ✓ v-bem:element:mod:value.f                                => block__element block__element_mod-value
-    ✓ v-bem=""                                                 => block
-    ✓ v-bem.e="false"                                          =>
-    ✓ v-bem.e="'element'"                                      => block__element
-    ✓ v-bem.e="{ element: true }"                              => block__element
-    ✓ v-bem.e="{ element: true, element2: true }"              => block__element block__element2
-    ✓ v-bem.e="{ element: true, element2: false }"             => block__element
-    ✓ v-bem.e.f="false"                                        =>
-    ✓ v-bem.e.f="'element'"                                    => block block__element
-    ✓ v-bem.e.f="{ element: true }"                            => block block__element
-    ✓ v-bem.e.f="{ element: true, element2: true }"            => block block__element block__element2
-    ✓ v-bem.e.f="{ element: true, element2: false }"           => block block__element
-    ✓ v-bem.e.f="{ element: false, element2: false }"          => block
-    ✓ v-bem:another.e.f.b="'element'"                          => another another__element
-    ✓ v-bem:another.e.f.b="{ element: true }"                  => another another__element
-    ✓ v-bem:another.e.f.b="{ element: true, element2: true }"  => another another__element another__element2
-    ✓ v-bem:another.e.f.b="{ element: true, element2: false }" => another another__element
-    ✓ v-bem:element="false"                                    =>
-    ✓ v-bem:element="'mod'"                                    => block__element_mod
-    ✓ v-bem:element="{ mod: true }"                            => block__element_mod
-    ✓ v-bem:element="{ mod: true, mod2: true }"                => block__element_mod block__element_mod2
-    ✓ v-bem:element="{ mod: true, mod2: false }"               => block__element_mod
-    ✓ v-bem:element="{ mod: false, mod2: false }"              =>
-    ✓ v-bem:element.f="false"                                  =>
-    ✓ v-bem:element.f="'mod'"                                  => block__element block__element_mod
-    ✓ v-bem:element.f="{ mod: true }"                          => block__element block__element_mod
-    ✓ v-bem:element.f="{ mod: true, mod2: true }"              => block__element block__element_mod block__element_mod2
-    ✓ v-bem:element.f="{ mod: true, mod2: false }"             => block__element block__element_mod
-    ✓ v-bem:element.f="{ mod: false, mod2: false }"            => block__element
+v-bem                                                    => block
+v-bem:element                                            => block__element
+v-bem:element.f                                          => block__element
+v-bem:another:element.f.b                                => another__element
+v-bem:element:mod                                        => block__element_mod
+v-bem:element:mod.f                                      => block__element block__element_mod
+v-bem:element:mod:value                                  => block__element_mod-value
+v-bem:element:mod:value.f                                => block__element block__element_mod-value
+v-bem=""                                                 => block
+v-bem="true"                                             => block
+v-bem="false"                                            =>
+v-bem.e="true"                                           => block
+v-bem.e="false"                                          =>
+v-bem.e="'element'"                                      => block__element
+v-bem.e="{ element: true }"                              => block__element
+v-bem.e="{ element: true, element2: true }"              => block__element block__element2
+v-bem.e="{ element: true, element2: false }"             => block__element
+v-bem.e.f="true"                                         => block
+v-bem.e.f="false"                                        =>
+v-bem.e.f="'element'"                                    => block block__element
+v-bem.e.f="{ element: true }"                            => block block__element
+v-bem.e.f="{ element: true, element2: true }"            => block block__element block__element2
+v-bem.e.f="{ element: true, element2: false }"           => block block__element
+v-bem.e.f="{ element: false, element2: false }"          => block
+v-bem:another.e.f.b="'element'"                          => another another__element
+v-bem:another.e.f.b="{ element: true }"                  => another another__element
+v-bem:another.e.f.b="{ element: true, element2: true }"  => another another__element another__element2
+v-bem:another.e.f.b="{ element: true, element2: false }" => another another__element
+v-bem:element="true"                                     => block__element
+v-bem:element.e="true"                                   => block__element
+v-bem:element="false"                                    =>
+v-bem:element="'mod'"                                    => block__element_mod
+v-bem:element="{ mod: true }"                            => block__element_mod
+v-bem:element="{ mod: true, mod2: true }"                => block__element_mod block__element_mod2
+v-bem:element="{ mod: true, mod2: false }"               => block__element_mod
+v-bem:element="{ mod: false, mod2: false }"              =>
+v-bem:element.f="true"                                   => block__element
+v-bem:element.f.e="true"                                 => block__element
+v-bem:element.f="false"                                  =>
+v-bem:element.f="'mod'"                                  => block__element block__element_mod
+v-bem:element.f="{ mod: true }"                          => block__element block__element_mod
+v-bem:element.f="{ mod: true, mod2: true }"              => block__element block__element_mod block__element_mod2
+v-bem:element.f="{ mod: true, mod2: false }"             => block__element block__element_mod
+v-bem:element.f="{ mod: false, mod2: false }"            => block__element
