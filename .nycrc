@@ -1,0 +1,17 @@
+{
+    "require": [
+        "@babel/register"
+    ],
+    "reporter": [
+        "lcov",
+        "text"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+    "include": [
+        "src/*.{js,vue}"
+    ],
+    "extension": [
+        ".js"
+    ]
+}

@@ -6,7 +6,6 @@ export function filterClasses(arr: string[], oldClasses: string[]): string[] {
 export default function applyClasses(el: HTMLElement, classes: string[], oldClasses: string[]) {
   const elClasses: string[] = el.className.split(' ');
 
-
   /* eslint-disable-next-line no-param-reassign */
   el.className = filterClasses(elClasses, oldClasses)
     .concat(classes)

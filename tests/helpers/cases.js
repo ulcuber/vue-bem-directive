@@ -1,3 +1,8 @@
+export const block = 'block';
+export const element = 'block';
+export const mod = 'mod';
+export const value = 'value';
+
 // first classes to contain, second not to contain
 export default {
   'v-bem': 'block',
@@ -14,12 +19,16 @@ export default {
 
   // with expression
   'v-bem=""': 'block',
+  'v-bem="true"': 'block',
+  'v-bem="false"': '',
+  'v-bem.e="true"': 'block',
   'v-bem.e="false"': '',
   'v-bem.e="\'element\'"': 'block__element',
   'v-bem.e="{ element: true }"': 'block__element',
   'v-bem.e="{ element: true, element2: true }"': 'block__element block__element2',
   'v-bem.e="{ element: true, element2: false }"': 'block__element',
 
+  'v-bem.e.f="true"': 'block',
   'v-bem.e.f="false"': '',
   'v-bem.e.f="\'element\'"': 'block block__element',
   'v-bem.e.f="{ element: true }"': 'block block__element',
@@ -32,6 +41,8 @@ export default {
   'v-bem:another.e.f.b="{ element: true, element2: true }"': 'another another__element another__element2',
   'v-bem:another.e.f.b="{ element: true, element2: false }"': 'another another__element',
 
+  'v-bem:element="true"': 'block__element',
+  'v-bem:element.e="true"': 'block__element',
   'v-bem:element="false"': '',
   'v-bem:element="\'mod\'"': 'block__element_mod',
   'v-bem:element="{ mod: true }"': 'block__element_mod',
@@ -39,6 +50,8 @@ export default {
   'v-bem:element="{ mod: true, mod2: false }"': 'block__element_mod',
   'v-bem:element="{ mod: false, mod2: false }"': '',
 
+  'v-bem:element.f="true"': 'block__element',
+  'v-bem:element.f.e="true"': 'block__element',
   'v-bem:element.f="false"': '',
   'v-bem:element.f="\'mod\'"': 'block__element block__element_mod',
   'v-bem:element.f="{ mod: true }"': 'block__element block__element_mod',

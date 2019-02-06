@@ -2,7 +2,7 @@
 import type { Delimiters, VNodeDirective, Component } from '../flow-types';
 
 import { isEquals, extractValueClasses } from './helpers';
-import { getArgs, getBEM } from './args';
+import { getArgs, getNextArg, getBlockFromComponent } from './args';
 import apply from './apply';
 
 export default function (
@@ -15,17 +15,21 @@ export default function (
   const oldClasses: string[] = [];
   const classes: string[] = [];
 
-  const args = getArgs(bindings.arg);
-  const {
-    block,
-    element,
-    modifier,
-    modifierValue,
-  } = getBEM(component, args, delimiters, bindings.modifiers.b);
+  const evaluated: string = bindings.arg;
+  const args: string[] = getArgs(evaluated);
+  const hasArgs: boolean = args.length > 0;
+
+  const block: string = bindings.modifiers.b
+    ? getNextArg(args, delimiters.ns)
+    : getBlockFromComponent(component, delimiters.ns);
+  if (!block && oldBlock === undefined) { return; }
+  const element: string = getNextArg(args, delimiters.el);
+  const modifier: string = getNextArg(args, delimiters.mod);
+  const modifierValue: string = getNextArg(args, delimiters.modVal);
 
   function pushArgsClasses(to: string[], b: string) {
-    const fullElement = b + element;
-    if (args.length > 0) {
+    const fullElement: string = b + element;
+    if (hasArgs) {
       if (modifier) {
         if (bindings.modifiers.f) {
           to.push(fullElement);
@@ -34,7 +38,7 @@ export default function (
       } else {
         to.push(fullElement);
       }
-    } else if (b) {
+    } else {
       to.push(b);
     }
   }
@@ -73,7 +77,7 @@ export default function (
       }
     } else {
       if (bindings.modifiers.f) {
-        classes.push(block + element);
+        pushArgsClasses(classes, block);
       }
       extractValueClasses(classes, oldClasses, value, prefix);
     }

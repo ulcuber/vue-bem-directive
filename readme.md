@@ -2,9 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ulcuber/vue-bem-directive.svg?branch=master)](https://travis-ci.org/ulcuber/vue-bem-directive)
 
-
-
-# Install
+## Install
 
 ```js
 import bem from 'vue-bem-directive';
@@ -16,7 +14,7 @@ Vue.use(bem, {
 });
 ```
 
-# Use
+## Use
 
 See [spec](spec.txt) for all use cases
 

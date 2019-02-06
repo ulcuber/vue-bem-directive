@@ -1,5 +1,5 @@
 // @flow
-import type { BEM, Delimiters, Component } from '../flow-types';
+import type { Component } from '../flow-types';
 
 export function getArgs(arg: ?string): string[] {
   if (arg) {
@@ -8,38 +8,15 @@ export function getArgs(arg: ?string): string[] {
   return [];
 }
 
-function getNextArg(arr: string[], prefix: string): string {
+export function getNextArg(arr: string[], prefix: string): string {
   const first = arr.shift();
   return first ? prefix + first : '';
 }
 
-export function getBEM(
-  component: Component,
-  args: string[],
-  delimiters: Delimiters,
-  hasArgsBlock: boolean = false,
-): BEM {
-  const bem = args.slice();
-
-  let block: string;
-  if (hasArgsBlock) {
-    block = getNextArg(bem, delimiters.ns);
-  } else {
-    const { $options } = component;
-    const name = (
-      component.block || $options.block || $options.name
-    );
-    block = name ? delimiters.ns + name : '';
-  }
-
-  const element: string = getNextArg(bem, delimiters.el);
-  const modifier: string = getNextArg(bem, delimiters.mod);
-  const modifierValue: string = getNextArg(bem, delimiters.modVal);
-
-  return {
-    block,
-    element,
-    modifier,
-    modifierValue,
-  };
+export function getBlockFromComponent(component: Component, prefix: string): string {
+  const { $options } = component;
+  const name: ?string = (
+    component.block || $options.block || $options.name
+  );
+  return name ? prefix + name : '';
 }

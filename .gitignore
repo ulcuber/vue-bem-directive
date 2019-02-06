@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/coverage
+/.nyc_output
 
 # Log files
 npm-debug.log*

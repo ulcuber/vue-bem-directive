@@ -7,7 +7,7 @@ Object.keys(cases).forEach((key) => {
   arrayedCases[key] = shouldContain;
 });
 
-export const getMaxLength = () => {
+const getMaxLength = () => {
   let max = 0;
   Object.keys(cases).forEach((key) => {
     if (key.length > max) max = key.length;
@@ -16,12 +16,12 @@ export const getMaxLength = () => {
   return max;
 };
 
-export const eachCase = (cb) => {
+const maxLength = getMaxLength();
+
+export default (cb) => {
   Object.keys(arrayedCases).forEach((key) => {
-    cb(key, arrayedCases[key]);
+    const spaces = Array(maxLength - key.length).fill('').join(' ');
+    const to = cases[key];
+    cb(key, arrayedCases[key], { spaces, to });
   });
 };
-
-export const replaceInArray = (arr, needle, newElement) => arr.map(
-  element => (element.replace(needle, newElement)),
-);

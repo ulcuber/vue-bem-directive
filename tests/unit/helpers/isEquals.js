@@ -1,7 +1,7 @@
 import { assert } from 'chai';
-import { isEquals } from '../../src/helpers';
+import { isEquals } from '../../../src/helpers';
 
-describe('isEquals helper', () => {
+export default () => describe('isEquals', () => {
   it('should return true for equal strings', () => {
     assert.isTrue(isEquals('test', 'test'));
   });
@@ -28,5 +28,12 @@ describe('isEquals helper', () => {
       test1: true,
     };
     assert.isFalse(isEquals(obj1, obj2));
+  });
+  it('should return false for different types', () => {
+    assert.isFalse(isEquals({}, ''));
+    assert.isFalse(isEquals({}, false));
+    assert.isFalse(isEquals({}, true));
+    assert.isFalse(isEquals('', true));
+    assert.isFalse(isEquals('', false));
   });
 });
