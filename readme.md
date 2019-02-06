@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/ulcuber/vue-bem-directive.svg?branch=master)](https://travis-ci.org/ulcuber/vue-bem-directive)
 
+[![Coverage Status](https://coveralls.io/repos/github/ulcuber/vue-bem-directive/badge.svg?branch=master)](https://coveralls.io/github/ulcuber/vue-bem-directive?branch=master)
+
 ## Install
 
 ```js
