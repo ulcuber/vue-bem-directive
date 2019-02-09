@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased][]
 
-## [1.1.4] - 2019-02-09
+## [1.1.4][] - 2019-02-09
 
 ### Changed
 
 -   codacy coverage moved to travis
 
-## [1.1.3] - 2019-02-08
+## [1.1.3][] - 2019-02-08
 
 ### Changed
 
