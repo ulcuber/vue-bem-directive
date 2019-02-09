@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased][]
 
+## [1.1.4] - 2019-02-09
+
+### Changed
+
+-   codacy coverage moved to travis
+
 ## [1.1.3] - 2019-02-08
 
 ### Changed
@@ -43,6 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   true expressions
 
-[unreleased]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.3...HEAD
+[unreleased]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.4...HEAD
+
+[1.1.4]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.3...v1.1.4
 
 [1.1.3]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.2...v1.1.3
