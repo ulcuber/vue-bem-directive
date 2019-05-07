@@ -19,7 +19,7 @@ Vue.use(bem, {
 
 ## Use
 
-See [spec](spec.txt) for all use cases
+The `name` of the component will be used as `Block` part of the class names.
 
 ```html
 <template>
@@ -46,6 +46,83 @@ will produce
   <div class="block__element_mod"></div>
 </div>
 ```
+
+## Configuration
+
+You can pass in an object defining the delimiters and a namespace when
+registering the directive.
+
+| Option | Description                                     | Default      |
+|--------|-------------------------------------------------|--------------|
+| ns     | Namespace                                       | `''` (empty) |
+| el     | Separator between `Block` and `Element` part    | `'__'`       |
+| mod    | Separator between `Element` and `Modifier` part | `'_'`        |
+| modVal | Separator between `Modifier` name and value     | `'-'`        |
+
+
+## Syntax
+
+The directive can be used with one or multiple arguments or with an expression
+and can control the output with modifiers.
+
+See [spec](spec.txt) for all use cases.
+
+### Arguments
+
+The first argument is used as `Element` part. Second and third arguments are
+`Modifier` name and value. If the `.b` modifier is used, the first argument
+becomes the `Block` part, second the `Element`, etc.
+
+```
+v-bem:element            =>  block__element
+v-bem:element:mod        =>  block__element_mod
+v-bem:element:mod:value  =>  block__element_mod-value
+v-bem:another:element.b  =>  another__element
+```
+
+### Expressions
+
+If the expression is a *boolean value*, it will control the output of the
+last argument:
+
+```
+v-bem="false"          => 
+v-bem:element="true"   =>  block__element
+v-bem:element="false"  => 
+```
+
+If the expression is a *string* it will be used as `Modifier`:
+
+```
+v-bem="'element'"    =>  block__element
+v-bem:element="'mod'"  =>  block__element_mod
+```
+
+If the expression is an *object* it will define multiple `Modifier` name.
+
+```
+v-bem:element="{ mod: true, mod2: false }"  =>  block__element_mod
+v-bem:element="{ mod: true, mod2: true }"   =>  block__element_mod block__element_mod2
+```
+
+Using the `.e` modifier it is possible to specify multiple `Element` names:
+
+```
+v-bem.e="{ element: true, element2: true }"   =>  block__element block__element2
+v-bem.e="{ element: true, element2: false }"  =>  block__element
+```
+
+### Modifiers
+
+Modifiers can be set either on the directive name (`v-bem`) or on a the argument.
+
+| Modifier | Description                                                        | Example                                                       |
+|:---------|:-------------------------------------------------------------------|:--------------------------------------------------------------|
+| .e       | Use the expression as `Element` part(s)                            | `v-bem.e="'element'"` → `'block__element'`                    |
+| .b       | Use the first arguement as `Block` part of the class name          | `v-bem:yoghurt:element.b` → `'yoghurt__element'`              |
+| .f       | Used on an `Element`, also print the class name without modifiers. | `v-bem:element:mod.f` → `'block__element block__element_mod'` |
+| .f       | Used on `Block` level, also output the `block` class name.         | `v-bem.e.f="{ element: true }" ` → `'block block__element'`   |
+
 
 ## Changelog
 
