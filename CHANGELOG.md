@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased][]
 
+### Changed
+
+-   Extended README
+
+### Credits
+
+Huge thanks to (@rangermeier)[https://github.com/rangermeier]
+
 ## [1.1.4][] - 2019-02-09
 
 ### Changed
