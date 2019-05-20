@@ -72,10 +72,12 @@ The first argument is used as `Element` part. Second and third arguments are
 `Modifier` name and value. If the `.b` modifier is used, the first argument
 becomes the `Block` part, second the `Element`, etc.
 
+```txt
     v-bem:element            =>  block__element
     v-bem:element:mod        =>  block__element_mod
     v-bem:element:mod:value  =>  block__element_mod-value
     v-bem:another:element.b  =>  another__element
+```
 
 ### Expressions
 
@@ -84,24 +86,32 @@ Plugin was created mostly for this use cases.
 If the expression is a _boolean value_, it will control the output of the
 last argument:
 
+```txt
     v-bem="false"          =>
     v-bem:element="true"   =>  block__element
     v-bem:element="false"  =>
+```
 
 If the expression is a _string_ it will be used as dynamic `Element` / `Modifier`:
 
+```txt
     v-bem="'element'"    =>  block__element
     v-bem:element="'mod'"  =>  block__element_mod
+```
 
 If the expression is an _object_ it will define multiple dynamic `Modifier` name.
 
+```txt
     v-bem:element="{ mod: true, mod2: false }"  =>  block__element_mod
     v-bem:element="{ mod: true, mod2: true }"   =>  block__element_mod block__element_mod2
+```
 
 Using the `.e` modifier it is possible to specify multiple dynamic `Element` names:
 
+```txt
     v-bem.e="{ element: true, element2: true }"   =>  block__element block__element2
     v-bem.e="{ element: true, element2: false }"  =>  block__element
+```
 
 ### Modifiers
 
