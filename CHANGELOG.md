@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased][]
 
+## [1.2.0][] - 2019-05-20
+
 ### Changed
 
 -   Extended README
+-   Updated dependencies
 
 ### Credits
 
@@ -57,7 +60,9 @@ Huge thanks to [@rangermeier](https://github.com/rangermeier)
 
 -   true expressions
 
-[unreleased]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.4...HEAD
+[unreleased]: https://github.com/ulcuber/vue-bem-directive/compare/v1.2.0...HEAD
+
+[1.2.0]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.3...v1.2.0
 
 [1.1.4]: https://github.com/ulcuber/vue-bem-directive/compare/v1.1.3...v1.1.4
 
