@@ -4,7 +4,7 @@ import { shallowMount } from '@vue/test-utils';
 export default ({
   localVue, eachCase,
 }) => describe('For component without any block name', () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     template,
   }, { localVue });
   eachCase((directive, expectedClasses, { spaces, to }) => {

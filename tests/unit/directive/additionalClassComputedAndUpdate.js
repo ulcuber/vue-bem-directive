@@ -4,7 +4,7 @@ import { shallowMount } from '@vue/test-utils';
 export default ({
   localVue, eachCase, block,
 }) => xdescribe(`For component with name ${block} and additional computed :class when it updates`, () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     name: block,
     data() {
       return {
@@ -19,7 +19,6 @@ export default ({
 
     let to = expectedClasses.join(' ');
     it(`${directive} ${additional}${spaces} => ${to}`, () => {
-      console.log({ active: wrapper.vm.isActive });
       expect(wrapper.classes()).to.have.members(expectedClasses);
       wrapper.destroy();
     });

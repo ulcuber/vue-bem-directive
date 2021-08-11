@@ -4,7 +4,7 @@ import { shallowMount } from '@vue/test-utils';
 export default ({
   localVue, eachCase, block, element,
 }) => xdescribe(`For component with name ${block} and additional same as full element class`, () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     name: block,
     template,
   }, { localVue });
@@ -12,7 +12,7 @@ export default ({
     const additionalClass = `${block}__${element}`;
     const additional = `class="${additionalClass}"`;
 
-    const withAdditional = expectedClasses.filter(item => item !== additionalClass);
+    const withAdditional = expectedClasses.filter((item) => item !== additionalClass);
     withAdditional.push(additionalClass);
 
     const to = withAdditional.join(' ');

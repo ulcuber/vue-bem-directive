@@ -1,6 +1,6 @@
 // @flow
 export function filterClasses(arr: string[], oldClasses: string[]): string[] {
-  return arr.filter(name => oldClasses.indexOf(name) === -1);
+  return arr.filter((name) => oldClasses.indexOf(name) === -1);
 }
 
 export default function applyClasses(el: HTMLElement, classes: string[], oldClasses: string[]) {

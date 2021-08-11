@@ -4,7 +4,7 @@ import { shallowMount } from '@vue/test-utils';
 export default ({
   localVue, eachCase, block,
 }) => xdescribe(`For component with name ${block} and additional class`, () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     name: block,
     template,
   }, { localVue });

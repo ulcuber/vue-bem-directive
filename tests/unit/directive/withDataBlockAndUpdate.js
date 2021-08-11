@@ -5,7 +5,7 @@ import { replaceInArray } from '../../helpers';
 export default ({
   localVue, eachCase, block,
 }) => describe(`For component with data block = '${block}' should remove old when data changing`, () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     data() { return { block }; },
     template,
   }, { localVue, propsData: { block } });

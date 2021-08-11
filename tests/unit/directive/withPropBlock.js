@@ -4,7 +4,7 @@ import { shallowMount } from '@vue/test-utils';
 export default ({
   localVue, eachCase, block,
 }) => describe(`For component with prop block = '${block}'`, () => {
-  const factory = template => shallowMount({
+  const factory = (template) => shallowMount({
     props: { block: String },
     template,
   }, { localVue, propsData: { block } });
