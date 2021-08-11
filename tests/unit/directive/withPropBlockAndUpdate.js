@@ -10,13 +10,13 @@ export default ({
     template,
   }, { localVue, propsData: { block } });
   eachCase((directive, expectedClasses, { spaces, to }) => {
-    it(`${directive}${spaces} => ${to}`, () => {
+    it(`${directive}${spaces} => ${to}`, async () => {
       const wrapper = factory(`<div ${directive}></div>`);
 
       const props = wrapper.props();
       const changedBlock = `${props.block}test`;
       const expectedClassesWithChangedBlock = replaceInArray(expectedClasses, block, changedBlock);
-      wrapper.setProps({
+      await wrapper.setProps({
         ...props,
         block: changedBlock,
       });

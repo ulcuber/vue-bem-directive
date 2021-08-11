@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 -   updated dependencies
+-   tests now use async to await setProps, setData
+
+### Fixed
+
+-   collisions of babelrc presets in tests
 
 ### Removed
 

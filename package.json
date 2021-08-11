@@ -47,7 +47,7 @@
     "@vue/cli-plugin-unit-mocha": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-airbnb": "^5.3.0",
-    "@vue/test-utils": "^1.0.0-beta.28",
+    "@vue/test-utils": "^1.2.2",
     "babel-eslint": "^10.0.1",
     "babel-plugin-istanbul": "^6.0.0",
     "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
@@ -70,7 +70,7 @@
     "rollup": "^2.56.2",
     "rollup-plugin-flow": "^1.1.1",
     "vue": "^2.6.14",
-    "vue-template-compiler": "^2.5.22"
+    "vue-template-compiler": "^2.6.14"
   },
   "peerDependencies": {
     "vue": "^2.6.14"
