@@ -61,7 +61,7 @@
     "remark-cli": "^6.0.1",
     "remark-lint": "^6.0.4",
     "remark-preset-lint-recommended": "^3.0.2",
-    "rollup": "^1.12.3",
+    "rollup": "^2.56.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-flow": "^1.1.1",
