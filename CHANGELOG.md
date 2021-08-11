@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased][]
 
+### Added
+
+-   github actions: dependabot and semantic
+
 ## [1.2.0][] - 2019-05-20
 
 ### Changed
