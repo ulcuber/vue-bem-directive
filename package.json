@@ -57,7 +57,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-mocha": "^5.2.1",
+    "eslint-plugin-mocha": "^6.3.0",
     "eslint-plugin-vue": "^5.1.0",
     "flow-bin": "^0.91.0",
     "js-yaml": "^3.13.1",
