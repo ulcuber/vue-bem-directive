@@ -54,7 +54,7 @@
     "chai": "^4.2.0",
     "codacy-coverage": "^3.4.0",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-mocha": "^6.3.0",
