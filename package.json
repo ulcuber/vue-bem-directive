@@ -59,7 +59,7 @@
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-mocha": "^6.3.0",
     "eslint-plugin-vue": "^5.1.0",
-    "flow-bin": "^0.167.0",
+    "flow-bin": "^0.171.0",
     "js-yaml": "^4.1.0",
     "nyc": "^15.1.0",
     "remark-cli": "^10.0.0",
